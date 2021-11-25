@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+
+        <title>GPR Inventario</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="#{request.contextPath}/css/gpr.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="style.css"/>
+    </h:head>
+    <h:body>
+        <nav>
+            <div class="fila">
+                <div class="nav">
+                    <img class="logo" src="../../image/logotipo_peq.png" alt="logo"/>
+                </div>
+                <div class="nav">
+                    <a class="button button_black" href="#{request.contextPath}/index.xhtml">Home</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/gestion/gestion_incidentes.xhtml">Incidentes</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/colaboradores/colaboradores.xhtml">Colaboradores</a>
+                    <a class="button button_black button_selected" href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Inventario</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/registro/registro.xhtml">Salir</a>
+                </div>
+                <div class="nav" style="max-width: 180px;">
+                    <div class="avatar">
+                        <img class="imguser" src="../../image/Logo_user.png" alt="imguser"/>
+                    </div>
+                    <div style="max-width: 80px;">Tecnico TI</div>
+                </div>
+            </div>
+        </nav>
+
+        <div style="padding-top: 10px"></div>
+        <div class="contenido">
+            <div style="border:black 1px solid; width: 30%; margin-right: 10px; display: grid; align-items: center; justify-content: center;">
+                <div class="encabezadocol"><b>Selectores</b></div>
+                <div class="tcentrado"><b>Dependencia</b></div>
+                <div class="filtros">
+                    <div>
+                        <inputText type="checkbox" value=""/>Administrativo
+                    </div>
+                    <div>
+                        <inputText type="checkbox" value=""/>Operativo
+                    </div>
+                    <div>
+                        <inputText type="checkbox" value=""/>Juridico
+                    </div>
+                </div>
+                <div class="tcentrado"><b>Estado</b></div>
+
+                <div>
+                    <div class="filtros">
+                        <div>
+                            <inputText type="checkbox" vlue=""/>Asignado
+                        </div>
+                        <div>
+                            <inputText type="checkbox" value=""/>Disponible
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tcentrado"><b>Tipo</b></div>
+
+                <div>
+                    <div class="filtros">
+                        <div>
+                            <inputText type="checkbox" value=""/>pc escritorio
+                        </div>
+                        <div>
+                            <inputText type="checkbox" value=""/>Portátil
+                        </div>
+                        <div>
+                            <inputText type="checkbox" value=""/>Todo en uno
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tcentrado"><b>Condición</b></div>
+
+                <div>
+                    <div class="filtros">
+                        <div>
+                            <inputText type="checkbox" value="N"/>Nuevo
+                        </div>
+                        <div>
+                            <inputText type="checkbox" value=""/>Usado
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div style="border:black 1px solid; width: 70%;">
+                <!-- caja de busqueda y botones -->
+                <br></br>
+                <h:form>
+                    <div class="topnav">
+                        <a class="exportar" href="/modulos/reportes/reporteinventariosgral.xlsx">Exportar</a>
+                        <a href="#{request.contextPath}/modulos/inventarios/agregarinventario.xhtml">Agregar Inventario</a>
+                        <a href="#{request.contextPath}/modulos/inventarios/asignarinventario.xhtml">Asignar Inventario</a>
+                        <h:inputText  value="Búsqueda"></h:inputText>
+                    </div>
+                </h:form>
+
+                <div class="hscroll">
+                    <table width="100%" border="1" cellspacing="0" cellpadding="6" style="margin-top: 30px;">
+                        <tbody>
+                            <tr>
+                                <th>Act</th>
+                                <th>IdInventario</th>
+                                <th>Estado</th>
+                                <th>Tipo</th>
+                                <th>Condición del equipo</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Proveedor</th>
+                                <th>Serial</th>
+                                <th>Área</th>
+                                <th>Fecha Ingreso</th>
+                                <th>Sistema Operativo</th>
+                                <th>Microsoft Office</th>
+                                <th>Procesador</th>
+                                <th>Memoria RAM</th>
+                                <th>Capacidad Disco Duro</th>
+                                <th>Detalles</th>
+                                <th>Comentarios</th>
+                                <th>Asignado a</th>
+
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/inventarios/visualizarinventario.xhtml"></a></button>
+                                    <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/inventarios/editarinventario.xhtml"></a></button>
+
+                                </td>
+                                <td>11001</td>
+                                <td>Disponible</td>
+                                <td>PC Escritorio</td>
+                                <td>Usado</td>
+                                <td>Acer</td>
+                                <td>Pac DUO</td>
+                                <td>Vision X</td>
+                                <td>78AS5874</td>
+                                <td>Jurídica</td>
+                                <td>2020-10-15</td>
+                                <td>Windows 10</td>
+                                <td>Office 2016</td>
+                                <td>Core I5</td>
+                                <td>4GB</td>
+                                <td>1TB</td>
+                                <td>Cargador y Mouse</td>
+                                <td>Equipo en caja</td>
+                                <td>Carlos Perez - CC80564971</td>
+
+
+                            </tr>
+
+                            <tr>
+                                <td style="text-align: center;">
+                                    <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/inventarios/VisualizarInventario.xhtml"></a></button>
+                                    <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/inventarios/EditarInventario.xhtml"></a></button>
+
+                                </td>
+                                <td>11002</td>
+                                <td>Asignado</td>
+                                <td>Pórtatil</td>
+                                <td>Nuevo</td>
+                                <td>Lenovo</td>
+                                <td>V33014RRR</td>
+                                <td>Vision X</td>
+                                <td>156AF879</td>
+                                <td>Adminsitrativa</td>
+                                <td>2020-11-05</td>
+                                <td>Windows 10</td>
+                                <td>Office 2016</td>
+                                <td>Core I5</td>
+                                <td>8GB</td>
+                                <td>500MB</td>
+                                <td>Cargador y Mouse</td>
+                                <td>Equipo en caja</td>
+                                <td>David Castro - CC35698741</td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td style="text-align: center;">
+                                    <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/inventarios/VisualizarInventario.html"></a></button>
+                                    <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/inventarios/EditarInventario.html"></a></button>
+
+                                </td>
+                                <td>11003</td>
+                                <td>Asignado</td>
+                                <td>Todo en Uno</td>
+                                <td>Usado</td>
+                                <td>HP</td>
+                                <td>Pro 4300</td>
+                                <td>Jhan Carlo Jaramillo</td>
+                                <td>HP4598756</td>
+                                <td>Operativa</td>
+                                <td>2020-10-05</td>
+                                <td>Windows 8</td>
+                                <td>Office 2010</td>
+                                <td>Core I3</td>
+                                <td>4GB</td>
+                                <td>500MB</td>
+                                <td>Camara Integrada</td>
+                                <td>Rayon en parte trasera de carcasa</td>
+                                <td>Angela Diaz - CC197845623</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+
+            <ul class="social-network social-circle">
+
+                <li><a href="https://www.facebook.com/JelkhAbogados/?ti=as" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/grupo_consultor?lang=es" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/grupo-consultor-andino-sa-21a74959/?originalSubdomain=co" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+
+
+
+    </h:body>
+</html>
+

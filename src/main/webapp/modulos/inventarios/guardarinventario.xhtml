@@ -1,19 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <<title>Aviso Guardar Inventario</title>
+
+        <title>Aviso Guardar Inventario</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="#{request.contextPath}/css/gpr.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
-
-
-
     </h:head>
-
     <h:body>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -35,13 +31,13 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-light"><a href="#{request.contextPath}/inventarios/inventario.xhtml" style="text-decoration: none;">Cancelar</a></button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <a class="btn btn-primary" href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">si</a>
+                    <a class="btn btn-light"  href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Cancelar</a>
                 </div>
             </div>
         </div>
 
+
     </h:body>
-
-
 </html>
+
