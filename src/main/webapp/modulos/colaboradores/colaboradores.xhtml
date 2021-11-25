@@ -12,38 +12,235 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="style.css"/>
     </h:head>
-     <h:body>
+    <h:body>
 
         <!-- insertar areas 
-        esta es menu superior -->
+        esta es menul -->
 
-        <ui:insert>
-            <ui:include src="menu.xhtml"></ui:include>
-        </ui:insert>
+        <nav>
+            <div class="fila">
+                <div>
+                    <img class="logo" src="#{request.contextPath}/image/logotipo_peq.png" alt="logo"/>
+                </div>
+                <div class="">
+                    <a class="button button_black" href="#{request.contextPath}/index.xhtml">Home</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/gestion/gestion_incidentes.xhtml">Incidentes</a>
+                    <a class="button button_black button_selected" href="#{request.contextPath}/modulos/colaboradores/colaboradores.xhtml">Colaboradores</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Inventario</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/registro/registro.xhtml">Salir</a>
+                </div>
+                <div class="colu" style="max-width: 160px;">
+                    <div class="avatar">
+                        <img class="imguser" src="#{request.contextPath}/image/Logo_user.png" alt="imguser"/>
+                    </div>
+                    <div style="max-width: 80px;">Administrativo</div>
+                </div>
+
+            </div>
+        </nav>
 
 
 
-        <div style="padding-top: 10px"></div>
+        
         <div class="contenido">
 
 
-            <!-- insertar areas 
-        esta es menu vertical -->
-            <ui:insert>
-                <ui:include src="menuvertical.xhtml" ></ui:include>
-            </ui:insert>
+            <div style="border:black 1px solid; width: 30%; margin-right: 10px; display: grid; align-items: center; justify-content: center;">
+                <div class="encabezadocol"><b>Selectores</b></div>
+                <div class="tcentrado"><b>Área / Dependencia</b></div>
+                <div class="filtros">
+                    <div>
+                        <inputText type="checkbox">Administrativa</inputText>
+                    </div>
+                    <div>
+                        <inputText type="checkbox">Operativa</inputText>
+                    </div>
+                    <div>
+                        <inputText type="checkbox">Jurídica</inputText>
+                    </div>
+                </div>
+                <div class="tcentrado"><b>Estado</b></div>
 
-            <!-- insertar areas 
-        esta es area de trabajo -->
-            <ui:insert>
-                <ui:include src="areatrabajo.xhtml"></ui:include>
-            </ui:insert>
+                <div>
+                    <div class="filtros">
+                        <div>
+                            <inputText type="checkbox">Activo</inputText>
+                        </div>
+                        <div>
+                            <inputText type="checkbox">Inactivo</inputText>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+            <div style="border:black 1px solid; width: 70%;">
+
+
+                <h:form>
+                    <!-- caja de busqueda y botones -->
+                    <br>
+                    </br>
+
+                    <div class="topnav">
+                        <a class="exportar" href="#{request.contextPath}/modulos/reportes/ReporteColaboradoresGral.xlsx">Exportar</a>
+                        <a href="../colaboradores/agregarcolaborador.xhtml">Agregar Colaborador</a>
+                        <h:inputText  value="Búsqueda"></h:inputText>
+                    </div>
+                </h:form>
+
+                <div class="hscroll">
+
+                    <table class="areatra">
+
+                        <tr>
+                            <th>Act</th>
+                            <th>Cédula/ID</th>
+                            <th>Tipo ID</th>
+                            <th>Fecha Ingreso</th>
+                            <th>Fecha Retiro</th>
+                            <th>Estado</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Fecha Nacimiento</th>
+                            <th>Estado Cívil</th>
+                            <th>Género</th>
+                            <th>Dirección Residencia</th>
+                            <th>Barrio</th>
+                            <th>Ciudad</th>
+                            <th>Teléfono Fijo</th>
+                            <th>Celular</th>
+                            <th>Area Ubicación</th>
+                            <th>Nombre ContactoE</th>
+                            <th>Apellido ContactoE</th>
+                            <th>Parentesco</th>
+                            <th>Celular ContactoE</th>
+                            <th>Num Fijo ContactoE</th>
+                            <th>Usuario Dom</th>
+                            <th>Pass</th>
+                            <th>Correo Institucional</th>
+                            <th>Inventario Asignado</th>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/colaboradores/visualizar_Colaborador.xhtml"></a></button>
+                                <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/colaboradores/editar_Colaborador.xhtml"></a></button>
+                            </td>
+                            <td>80564971</td>
+                            <td>CC</td>
+                            <td>2020-10-15</td>
+                            <td>2021-03-20</td>
+                            <td>Inactivo</td>
+                            <td>Carlos</td>
+                            <td>Perez</td>
+                            <td>2000-03-21</td>
+                            <td>Union libre</td>
+                            <td>Masculino</td>
+                            <td>Cra 34 15 65</td>
+                            <td>CIUDAD JARDIN</td>
+                            <td>BOGOTÁ</td>
+                            <td>6547896</td>
+                            <td>3152654897</td>
+                            <td>Jurídica</td>
+                            <td>Marcela</td>
+                            <td>Lopez</td>
+                            <td>Madre</td>
+                            <td>3152654899</td>
+                            <td>5236945</td>
+                            <td>xx</td>
+                            <td>*********</td>
+                            <td>cp@gconsultor.com.co</td>
+                            <td>1101</td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: center;">
+                                <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/colaboradores/visualizar_Colaborador.xhtml"></a></button>
+                                <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/colaboradores/editar_Colaborador.xhtml"></a></button>
+                            </td>
+                            <td>35698741</td>
+                            <td>CC</td>
+                            <td>2020-11-05</td>
+                            <td>- - -</td>
+                            <td>Activo</td>
+                            <td>David</td>
+                            <td>Castro</td>
+                            <td>1986-05-27</td>
+                            <td>Separado/a</td>
+                            <td>Masculino</td>
+                            <td>Calle 65 43 89</td>
+                            <td>VERBENAL</td>
+                            <td>BOGOTÁ</td>
+                            <td>5584698</td>
+                            <td>3201456987</td>
+                            <td>Administrativa</td>
+                            <td>Dario</td>
+                            <td>Castro</td>
+                            <td>Hermano/a</td>
+                            <td>3201456985</td>
+                            <td>4563289</td>
+                            <td>xx</td>
+                            <td>*********</td>
+                            <td>dc@gconsultor.com.co</td>
+                            <td>1102</td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="text-align: center;">
+                                <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/colaboradores/visualizar_Colaborador.xhtml"></a></button>
+                                <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/colaboradores/editar_Colaborador.xhtml"></a></button>
+                            </td>
+                            <td>197845623</td>
+                            <td>CE</td>
+                            <td>2020-10-05</td>
+                            <td>- - -</td>
+                            <td>Activo</td>
+                            <td>Angela</td>
+                            <td>Diaz</td>
+                            <td>2001-02-18</td>
+                            <td>Casado/a</td>
+                            <td>Femenino</td>
+                            <td>Calle 20 20 13</td>
+                            <td>20 DE JULIO</td>
+                            <td>BOGOTÁ</td>
+                            <td>2233546</td>
+                            <td>3002563987</td>
+                            <td>Operativa</td>
+                            <td>Clara</td>
+                            <td>Casas</td>
+                            <td>Hermano/a</td>
+                            <td>3002563977</td>
+                            <td>9654725</td>
+                            <td>xx</td>
+                            <td>*********</td>
+                            <td>aa@gconsultor.com.co</td>
+                            <td>1103</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
         </div>
-       
-        
-        <ui:insert>
-                <ui:include src="piedepagina.xhtml"></ui:include>
-            </ui:insert>
+
+
+        <div class="fila">
+
+            <ul class="social-network social-circle">
+
+                <li><a href="https://www.facebook.com/JelkhAbogados/?ti=as" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/grupo_consultor?lang=es" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/grupo-consultor-andino-sa-21a74959/?originalSubdomain=co" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
     </h:body>
 </html>
 

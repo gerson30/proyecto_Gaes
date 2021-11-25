@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>GPR Editar Colaborador</title>
+        <title>Editar Colaborador</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="../../css/gpr.css"/>
@@ -42,23 +42,24 @@
 
 
     <div class="formprincipal">
-
-        <div class="tituloinv">
-            <h6>EDITAR COLABORADOR</h6>
-        </div>
-        <br>
-        </br>
-
-
-        <div class="tituloinv">
-            <h6>Información Personal</h6>
-        </div>
-        <br>
-        </br>
-
-
         <div class="formprincipal">
+            <div class="tituloinv">
+                <h6>AGREGAR COLABORADOR</h6>
+            </div>
+            <br>
+            </br>
+
+
+            <div class="tituloinv">
+                <h6>Información Personal</h6>
+            </div>
+            <br>
+            </br>
+
+
+
             <h:form class="row g-3 needs-validation">
+
                 <div class="col-md-6">
                     <h:outputLabel for="validationServer01">Fecha Ingreso</h:outputLabel>
                     <h:inputText type="date" class="form-control is-invalid" id="validationServer01" placeholder="Ingrese la fecha " value=""/>
@@ -202,99 +203,103 @@
 
 
 
-    </div>
-
-    <br></br>
-
-    <br></br>
-    <div class="tituloinv">
-        <h6>Información Contacto de Emergencia</h6>
-    </div>
-    <br></br>
-    <br></br>
-
-    <div class="formprincipal">
 
 
 
-        <h:form class="row g-3 needs-validation">
+
+        <br></br>
+
+        <br></br>
+        <div class="formprincipal">
+            <div class="tituloinv">
+                <h6>Información Contacto de Emergencia</h6>
+            </div>
+            <br></br>
+            <br></br>
 
 
-            <div class="col-md-8">
-                <h:outputLabel for="validationServer15">Nombre contacto principal</h:outputLabel>
-                <h:inputText type="text " class="form-control is-valid" id="validationServer15" placeholder="Digite el nombre del contacto" value=""/>
-                <div class="valid-feedback ">
-                    Dato correcto.
+
+
+
+            <h:form class="row g-3 needs-validation">
+
+
+                <div class="col-md-8">
+                    <h:outputLabel for="validationServer15">Nombre contacto principal</h:outputLabel>
+                    <h:inputText type="text " class="form-control is-valid" id="validationServer15" placeholder="Digite el nombre del contacto" value=""/>
+                    <div class="valid-feedback ">
+                        Dato correcto.
+                    </div>
+                    <div class="invalid-feedback ">
+                        Corregir dato.
+                    </div>
                 </div>
-                <div class="invalid-feedback ">
-                    Corregir dato.
+                <div class="col-md-8">
+                    <h:outputLabel for="validationServer16">Parentesco</h:outputLabel>
+                    <h:selectOneMenu type="text " class="form-control is-invalid" id="validationServer16" placeholder="Seleccione el parentesco" value="">
+                        <f:selectItem  itemValue="Padre" itemLabel="Padre"/>
+                        <f:selectItem  itemValue="Madre" itemLabel="Madre"/>
+                        <f:selectItem  itemValue="Esposo" itemLabel="Esposo"/>
+                        <f:selectItem  itemValue="Hermana" itemLabel="Hermana"/>
+                    </h:selectOneMenu>
+                    <div class="valid-feedback ">
+                        Dato correcto.
+                    </div>
+                    <div class="invalid-feedback ">
+                        Seleccione de la lista.
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-8">
-                <h:outputLabel for="validationServer16">Parentesco</h:outputLabel>
-                <h:selectOneMenu type="text " class="form-control is-invalid" id="validationServer16" placeholder="Seleccione el parentesco" value="">
-                    <f:selectItem  itemValue="Padre" itemLabel="Padre"/>
-                    <f:selectItem  itemValue="Madre" itemLabel="Madre"/>
-                    <f:selectItem  itemValue="Esposo" itemLabel="Esposo"/>
-                    <f:selectItem  itemValue="Hermana" itemLabel="Hermana"/>
-                </h:selectOneMenu>
-                <div class="valid-feedback ">
-                    Dato correcto.
+
+                <div class="col-md-8">
+                    <h:outputLabel for="validationServer17">N° Celular</h:outputLabel>
+                    <h:inputText type="Phone number" class="form-control is-invalid" id="validationServer17" placeholder="Número de celular " value=""/>
+                    <div class="valid-feedback ">
+                        Dato correcto.
+                    </div>
+                    <div class="invalid-feedback ">
+                        El campo no puede estar vacío.
+                    </div>
                 </div>
-                <div class="invalid-feedback ">
-                    Seleccione de la lista.
-                </div>
-            </div>
-
-            <div class="col-md-8">
-                <h:outputLabel for="validationServer17">N° Celular</h:outputLabel>
-                <h:inputText type="Phone number" class="form-control is-invalid" id="validationServer17" placeholder="Número de celular " value=""/>
-                <div class="valid-feedback ">
-                    Dato correcto.
-                </div>
-                <div class="invalid-feedback ">
-                    El campo no puede estar vacío.
-                </div>
-            </div>
-        </h:form>
-    </div>
-
-
-
-    <br></br>
-    <br></br>
-    <div class="tituloinv ">
-        <h6>Cuenta de Usuario</h6>
-    </div>
-    <br></br>
-    <br></br>
-    <div class="formprincipal ">
-        <h:form>
-
-
-        <div class="col-md-8 ">
-            <h:outputLabel for="validationServer19 ">Usuario de Dominio</h:outputLabel>
-            <h:inputText type="text " class="form-control " id="validationServer19" placeholder="Digite el usuario de dominio " value=""/>
-            <div class="valid-feedback ">
-                Dato correcto.
-            </div>
-            <div class="invalid-feedback ">
-                Corregir dato.
-            </div>
-        </div>
-
-        <div class="col-md-8 ">
-            <h:outputLabel for="validationServer20 ">Contraseña de Dominio</h:outputLabel>
-            <h:inputText type="text" class="form-control" id="validationServer20" placeholder="Digite la contraseña de dominio " value=""/>
-            <div class="valid-feedback ">
-                La contreseña cumple los criterios de seguridad.
-            </div>
-            <div class="invalid-feedback ">
-                La contreseña NO cumple los criterios de seguridad.
-            </div>
-        </div>
             </h:form>
 
+        </div>
+
+
+        <br></br>
+        <br></br>
+        <div class="formprincipal">
+            <div class="tituloinv ">
+                <h6>Cuenta de Usuario</h6>
+            </div>
+            <br></br>
+            <br></br>
+
+            <h:form>
+
+
+                <div class="col-md-8 ">
+                    <h:outputLabel for="validationServer19 ">Usuario de Dominio</h:outputLabel>
+                    <h:inputText type="text " class="form-control " id="validationServer19" placeholder="Digite el usuario de dominio " value=""/>
+                    <div class="valid-feedback ">
+                        Dato correcto.
+                    </div>
+                    <div class="invalid-feedback ">
+                        Corregir dato.
+                    </div>
+                </div>
+
+                <div class="col-md-8 ">
+                    <h:outputLabel for="validationServer20 ">Contraseña de Dominio</h:outputLabel>
+                    <h:inputText type="text" class="form-control" id="validationServer20" placeholder="Digite la contraseña de dominio " value=""/>
+                    <div class="valid-feedback ">
+                        La contreseña cumple los criterios de seguridad.
+                    </div>
+                    <div class="invalid-feedback ">
+                        La contreseña NO cumple los criterios de seguridad.
+                    </div>
+                </div>
+            </h:form>
+        </div>
 
         <br></br>
         <br></br>
@@ -304,8 +309,8 @@
             <button class="btn btn-primary " type="submit ">Cancelar</button>
             <button type="button" class="btn btn-secondary">Acta Usuario</button>
         </div>
-    </div>
 
+    </div>
 
 
 
