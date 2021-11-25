@@ -4,30 +4,29 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
-<ui:composition>
-    
-    <div class="fila">
-            <div class="">
-                <img class="logo" src="#{request.contextPath}/image/logotipo_peq.png" alt="logo"/>
-            </div>
-            <div class="">
-                <a class="button button_black" href="#{request.contextPath}/index.xhtml">Home</a>
-                <a class="button button_black" href="#{request.contextPath}/modulos/gestion/gestion_incidentes.xhtml">Incidentes</a>
-                <a class="button button_black button_selected" href="#{request.contextPath}/modulos/colaboradores/colaboradores.xhtml">Colaboradores</a>
-                <a class="button button_black" href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Inventario</a>
-                <a class="button button_black" href="#{request.contextPath}/modulos/registro/Registro.xhtml">Salir</a>
-            </div>
-            <div class="colu" style="max-width: 160px;">
-                <div class="avatar">
-                    <img class="imguser" src="#{request.contextPath}/image/Logo_user.png" alt="imguser"/>
+    <ui:composition>
+        <nav>
+            <div class="fila">
+                <div>
+                    <img class="logo" src="#{request.contextPath}/image/logotipo_peq.png" alt="logo"/>
                 </div>
-                <div style="max-width: 80px;">Administrativo</div>
-            </div>
+                <div class="">
+                    <a class="button button_black" href="#{request.contextPath}/index.xhtml">Home</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/gestion/gestion_incidentes.xhtml">Incidentes</a>
+                    <a class="button button_black button_selected" href="#{request.contextPath}/modulos/colaboradores/colaboradores.xhtml">Colaboradores</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Inventario</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/registro/Registro.xhtml">Salir</a>
+                </div>
+                <div class="colu" style="max-width: 160px;">
+                    <div class="avatar">
+                        <img class="imguser" src="#{request.contextPath}/image/Logo_user.png" alt="imguser"/>
+                    </div>
+                    <div style="max-width: 80px;">Administrativo</div>
+                </div>
 
-        </div>
-        
-</ui:composition>
+            </div>
+        </nav>
+    </ui:composition>
 </html>
 
 
-    

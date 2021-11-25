@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+
+        <title>GPR Agregar Inventario</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../../css/gpr.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="style.css"/>
+
+    </h:head>
+    <h:body>
+        <nav>
+            <div class="fila">
+                <div>
+                    <img class="logo" src="#{request.contextPath}/image/logotipo_peq.png" alt="logo"/>
+                </div>
+                <div class="nav">
+                    <a class="button button_black" href="#{request.contextPath}/modulos/index.html">Home</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/gestion/gestion_incidentes.html">Incidentes</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/colaboradores/colaboradores.html">Colaboradores</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/proveedores/proveedores.html">Proveedores</a>
+                    <a class="button button_black button_h:selectOneMenued" href="#{request.contextPath}/modulos/inventarios/inventario.html">Inventario</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/registro/Registro.html">Salir</a>
+                </div>
+                <div class="nav" style="max-width: 160px;">
+                    <div class="avatar">
+                        <img class="imguser" src="#{request.contextPath}/image/Logo_user.png" alt="imguser"/>
+                    </div>
+                    <div style="max-width: 80px;">Tecnico TI</div>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <div class="formprincipal">
+
+            <div class="tituloinv">
+                <h6>AGREGAR INVENTARIO</h6>
+            </div>
+            <br></br>
+
+
+            <div class="tituloinv">
+                <h6>Información del equipo</h6>
+            </div>
+
+
+
+            <div class="formprincipal">
+                <h:form class="row g-3 needs-validation" >
+                    
+                    
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer02">Tipo</h:outputLabel>
+                        <h:selectOneMenu type="text" class="form-control is-invalid" id="validationServer02" placeholder="Seleccione el género" value="">
+                            <f:selectItem  itemValue="pcescritorio" itemLabel="pcescritorio"/>
+                            <f:selectItem  itemValue="Portatil" itemLabel="Portatil"/>
+                            <f:selectItem  itemValue="Todoenuno" itemLabel="Todoenuno"/>
+                        </h:selectOneMenu>
+
+
+                        <h:outputLabel for="validationServer03">Marca</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer03" placeholder="Seleccione la marca" value="">
+                            <f:selectItem itemValue="HP" itemLabel="HP"></f:selectItem>
+                            <f:selectItem itemValue="Lenovo" itemLabel="Lenovo"></f:selectItem>
+                            <f:selectItem itemValue="Asus" itemLabel="Asus" ></f:selectItem>
+                            <f:selectItem itemValue="Acer" itemLabel="Acer" ></f:selectItem>
+                            <f:selectItem itemValue="Toshiba" itemLabel="Todhiba"></f:selectItem>
+                            <f:selectItem itemValue="Dell" itemLabel="Dell"></f:selectItem>
+                        </h:selectOneMenu>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer04">Condición Equipo</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer04" placeholder="Indique el estado" value="">
+                            <f:selectItem itemValue="Nuevo" itemLabel="Nuevo"></f:selectItem>
+                            <f:selectItem itemValue="Usado" itemLabel="Usado"></f:selectItem>
+                        </h:selectOneMenu>
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer05">Modelo</h:outputLabel>
+                        <inputText type="text " class="form-control is-invalid" id="validationServer05" placeholder="Agregue el Modelo " value=""/>
+                        <div class="valid-feedback ">
+                            Dato correcto.
+                        </div>
+                        <div class="invalid-feedback ">
+                            Corregir dato.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer06">Proveedor</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer06" placeholder="Elija el área" value="">
+                            <f:selectItem itemValue="VisionX" itemLabel="VisionX"></f:selectItem>
+                            <f:selectItem itemValue="Jhan Carlo Jaramillo" itemLabel="Jhan Carlo Jaramillo"></f:selectItem>
+                        </h:selectOneMenu>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer07">Serial N°</h:outputLabel>
+                        <inputText type="text " class="form-control is-invalid" id="validationServer07" placeholder="Indique el serial" value=""/>
+                        <div class="valid-feedback ">
+                            Dato correcto.
+                        </div>
+                        <div class="invalid-feedback ">
+                            Corregir dato.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer08">Área</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer08" placeholder="Elija el área" value="">
+                            <f:selectItem itemValue="Administrativo" itemLabel="Administrativo">A</f:selectItem>
+                            <f:selectItem itemValue="Juridico" itemLabel="Juridicoo"></f:selectItem>
+                            <f:selectItem itemValue="Operativo" itemLabel="Operativo"></f:selectItem>
+                        </h:selectOneMenu>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer09">Fecha de Ingreso</h:outputLabel>
+                        <inputText type="datetime-local" class="form-control is-invalid " id="validationServer09" placeholder="Seleccione la fecha de ingreso" value=""/>
+                        <div class="valid-feedback ">
+                            Dato correcto.
+                        </div>
+                        <div class="invalid-feedback ">
+                            Debe h:seleccionar fecha y hora de ingreso.
+                        </div>
+                    </div>
+
+                </h:form>
+            </div>
+            <br></br>
+
+
+
+            <br></br>
+
+            <div class="tituloinv">
+                <h6>Información Hardware</h6>
+            </div>
+            <br></br>
+
+            <div class="formprincipal">
+                <h:form class="row g-3 needs-validation" >
+
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer10">Sistema Operativo</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer10" placeholder="Seleccione la marca" value="">
+                            <f:selectItem itemValue="W8" itemLabel="W8"></f:selectItem>
+                            <f:selectItem itemValue="W10" itemLabel="W10"> </f:selectItem>
+                        </h:selectOneMenu>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServe11">Microsoft Office</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer11" placeholder="Seleccione la marca" value="">
+                            <f:selectItem itemValue="2010" itemLabel="2010"></f:selectItem>
+                            <f:selectItem itemValue="2013" itemLabel="2013"></f:selectItem>
+                            <f:selectItem itemValue="2016" itemLabel="2016"></f:selectItem>
+                            <f:selectItem itemValue="2017" itemLabel="2017"></f:selectItem>
+                        </h:selectOneMenu>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer12">Procesador</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer12" placeholder="Seleccione la marca" value="">
+                            <f:selectItem itemValue="Core I3" itemLabel="Core I3"></f:selectItem>
+                            <f:selectItem itemValue="Core I5" itemLabel="Core I5"></f:selectItem>
+                            <f:selectItem itemValue="Core I7" itemLabel="Core I7"></f:selectItem>
+                        </h:selectOneMenu>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer13">Memoria RAM</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer13" placeholder="Seleccione la marca" value="">
+                            <f:selectItem itemValue="4 GB" itemLabel="4 GB"></f:selectItem>
+                            <f:selectItem itemValue="8 GB" itemLabel="8 GB"></f:selectItem>
+                            <f:selectItem itemValue="12 GB" itemLabel="12 GB"></f:selectItem>
+                            <f:selectItem itemValue="16 GB" itemLabel="16 GB"></f:selectItem>
+                        </h:selectOneMenu>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <h:outputLabel for="validationServer14"> Capacidad Disco Duro</h:outputLabel>
+                        <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer14" placeholder="Seleccione la marca" value="">
+                            <f:selectItem itemValue="500" itemLabel="500"></f:selectItem>
+                            <f:selectItem itemValue="1 TB" itemLabel="1 TB"></f:selectItem>
+                        </h:selectOneMenu>
+                    </div>
+
+
+
+
+
+                </h:form>
+
+
+            </div>
+            <br></br>
+
+                <div class="tituloinv">
+                    <h6>Detalles</h6>
+                </div>
+                <br></br>
+
+                <div class="formprincipal">
+                    <h:form class="row g-3 needs-validation" >
+
+                        <div class="col-md-6">
+                            <h:outputLabel for="validationServer15">Estado</h:outputLabel>
+                            <h:selectOneMenu type="text " class="form-control is-valid" id="validationServer15" placeholder="Seleccione la marca" value="">
+                                <f:selectItem itemValue="Asignado" itemLabel="Aignado"></f:selectItem>
+                                <f:selectItem itemValue="Disponible" itemLabel="Disponible"></f:selectItem>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="col-md-6">
+                            <h:outputLabel for="validationServer16">Detalles</h:outputLabel>
+                            <inputText type="text" class="form-control is-valid " id="validationServer16" placeholder="Last name " value=""/>
+                            <div class="valid-feedback ">
+                                Dato correcto.
+                            </div>
+                            <div class="invalid-feedback ">
+                                Corregir dato.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h:outputLabel for="validationServer17">Comentarios</h:outputLabel>
+                            <textarea type="text" class="form-control" id="validationServer17" rows="3" placeholder="Indique observaciones del equipo a registrar"></textarea>
+
+                        </div>
+
+                        <div>
+                            <button class="btn btn-primary " type="submit "><a href="#{request.contextPath}modulos/inventarios/EmerGuardarInv.html" style="text-decoration: none; color: white;">Guardar</a></button>
+                            <button class="btn btn-primary " type="submit "><a href="#{request.contextPath}modulos/inventarios/inventario.html" style="text-decoration: none; color: white;">Cancelar</a></button>
+                        </div>
+
+                    </h:form>
+                </div>
+
+
+
+
+
+        </div>
+        <div class="fila">
+
+            <ul class="social-network social-circle">
+
+                <li><a href="https://www.facebook.com/JelkhAbogados/?ti=as" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/grupo_consultor?lang=es" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/grupo-consultor-andino-sa-21a74959/?originalSubdomain=co" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+
+        <ul class="social-network social-circle">
+
+            <li><a href="https://www.facebook.com/JelkhAbogados/?ti=as" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/grupo_consultor?lang=es" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/grupo-consultor-andino-sa-21a74959/?originalSubdomain=co" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        
+
+
+
+
+    </h:body>
+</html>
+
+
+<!--
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+<div class="fila">
+-->
