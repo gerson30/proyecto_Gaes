@@ -19,12 +19,11 @@
                     <img class="logo" src="../../image/logotipo_peq.png" alt="logo"/>
                 </div>
                 <div class="nav">
-                    <a class="button button_black" href="#{request.contextPath}/index.html">Home</a>
-                    <a class="button button_black" href="#{request.contextPath}modulos/gestion/gestion_incidentes.xhtml">Incidentes</a>
-                    <a class="button button_black" href="#{request.contextPath}modulos/colaboradores/colaboradores.xhtml">Colaboradores</a>
-                    <a class="button button_black" href="#{request.contextPath}modulos/proveedores/proveedores.xhtml">Proveedores</a>
-                    <a class="button button_black button_selected" href="#{request.contextPath}modulos/inventarios/inventario.xhtml">Inventario</a>
-                    <a class="button button_black" href="#{request.contextPath}modulos/registro/Registro.xhtml">Salir</a>
+                    <a class="button button_black" href="#{request.contextPath}/index.xhtml">Home</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/gestion/gestion_incidentes.xhtml">Incidentes</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/colaboradores/colaboradores.xhtml">Colaboradores</a>
+                    <a class="button button_black button_selected" href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Inventario</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/registro/registro.xhtml">Salir</a>
                 </div>
                 <div class="nav" style="max-width: 180px;">
                     <div class="avatar">
@@ -107,12 +106,14 @@
             <div style="border:black 1px solid; width: 70%;">
                 <!-- caja de busqueda y botones -->
                 <br></br>
-                <div class="topnav">
-                    <a class="exportar" href="/modulos/reportes/ReporteInventariosGral.xlsx">Exportar</a>
-                    <a href="#{request.contextPath}/inventarios/AgregarInventario.xhtml">Agregar Inventario</a>
-                    <a href="#{request.contextPath}/inventarios/AsignarInventario.xhtml">Asignar Inventario</a>
-                    <inputText placeholder="Busqueda.."/>
-                </div>
+                <h:form>
+                    <div class="topnav">
+                        <a class="exportar" href="/modulos/reportes/reporteinventariosgral.xlsx">Exportar</a>
+                        <a href="#{request.contextPath}/modulos/inventarios/agregarinventario.xhtml">Agregar Inventario</a>
+                        <a href="#{request.contextPath}/modulos/inventarios/asignarinventario.xhtml">Asignar Inventario</a>
+                        <h:inputText  value="Búsqueda"></h:inputText>
+                    </div>
+                </h:form>
 
                 <div class="hscroll">
                     <table width="100%" border="1" cellspacing="0" cellpadding="6" style="margin-top: 30px;">
@@ -142,8 +143,8 @@
                             </tr>
                             <tr>
                                 <td style="text-align: center;">
-                                    <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/inventarios/VisualizarInventario.xhtml"></a></button>
-                                    <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/inventarios/EditarInventario.xhtml"></a></button>
+                                    <button><a class="ri-eye-line" href="#{request.contextPath}/modulos/inventarios/visualizarinventario.xhtml"></a></button>
+                                    <button><a class="ri-pencil-line" href="#{request.contextPath}/modulos/inventarios/editarinventario.xhtml"></a></button>
 
                                 </td>
                                 <td>11001</td>
