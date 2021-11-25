@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../../css/gpr.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="style.css"/>
+
+    </h:head>
+    <h:body>
+        <nav>
+            <div class="fila">
+                <div >
+                    <img class="logo" src="../../image/logotipo_peq.png" alt="logo"/>
+                </div>
+                <div class="nav">
+                    <a class="button button_black" href="#{request.contextPath}/index.xhtml">Home</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/gestion/gestion_incidentes.xhtml">Incidentes</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/colaboradors/colaboradores.xhtml">Colaboradores</a>
+                    <a class="button button_black button_selected" href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Inventario</a>
+                    <a class="button button_black" href="#{request.contextPath}/modulos/registro/registro.xhtml">Salir</a>
+                </div>
+                <div class="nav" style="max-width: 160px;">
+                    <div class="avatar">
+                        <img class="imguser" src="#{request.contextPath}/image/Logo_user.png" alt="imguser"/>
+                    </div>
+                    <div style="max-width: 80px;">Tecnico TI</div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="formprincipal">
+
+            <div class="tituloinv">
+                <h6>Asignar Inventario </h6>
+            </div>
+
+            <div class="tituloinv">
+                <h6>Detalles de asignación</h6>
+            </div>
+            <br></br>
+            <br></br>
+
+
+            <div class="formprincipal" align="center">
+
+                <h:form class="row g-3 needs-validation">
+                    <div class="col-md-12">
+                        <outputLabel for="validationServer01">Inventario a Entregar</outputLabel>
+                        <h:selectOneMenu class="form-control" id="validationServer01" placeholder="Seleccione la marca" >
+                            <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                            <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                            <f:selectItem itemValue="..." itemLabel="..." ></f:selectItem>
+                            <f:selectItem itemValue="..." itemLabel="..." ></f:selectItem>
+                            <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                            <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                        </h:selectOneMenu>
+
+
+                        <div class="valid-feedback ">
+                            Dato correcto.
+                        </div>
+                        <div class="invalid-feedback ">
+                            Seleccione de la lista.
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+
+
+                        </div>
+                        <div class="col-md-12">
+                            <outputLabel for="validationServer02">Cédula</outputLabel>
+                            <h:selectOneMenu type="text" class="form-control" id="validationServer02" placeholder="Seleccione la marca" >
+                                <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                                <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                                <f:selectItem itemValue="..." itemLabel="..." ></f:selectItem>
+                                <f:selectItem itemValue="..." itemLabel="..." ></f:selectItem>
+                                <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                                <f:selectItem itemValue="..." itemLabel="..."></f:selectItem>
+                            </h:selectOneMenu>
+
+
+                            <div class="valid-feedback ">
+                                Dato correcto.
+                            </div>
+                            <div class="invalid-feedback ">
+                                Seleccione de la lista.
+                                <br></br>
+                                <br></br>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <a class="btn btn-primary" href="#{request.contextPath}/modulos/inventarios/guardarinventario.xhtml">Guardar</a>
+                        <a class="btn btn-light"  href="#{request.contextPath}/modulos/inventarios/inventario.xhtml">Cancelar</a>
+                    </div>
+                </h:form>
+
+                <br></br>
+
+
+
+            </div>
+
+        </div>
+
+
+        <div class="fila">
+            <footer>
+                <div class="contain">
+                    <div class="row">
+
+                        <div>
+                            <ul class="social-network social-circle">
+
+                                <li><a href="https://www.facebook.com/JelkhAbogados/?ti=as" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/grupo_consultor?lang=es" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/grupo-consultor-andino-sa-21a74959/?originalSubdomain=co" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+        </div>
+    </h:body>
+</html>
